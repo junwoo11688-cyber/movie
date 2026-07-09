@@ -1,0 +1,609 @@
+{
+  "generatedAt": "2026-07-09T01:27:16.207Z",
+  "region": "KR",
+  "language": "ko-KR",
+  "source": "tmdb-public",
+  "window": {
+    "startDate": "2026-07-02",
+    "endDate": "2027-01-05"
+  },
+  "attribution": [
+    "Theater release data is collected from public TMDB pages.",
+    "OTT new-release data is collected from public JustWatch Korea pages."
+  ],
+  "items": [
+    {
+      "id": "theater-1108427-2026-07-08",
+      "tmdbId": 1108427,
+      "title": "모아나",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-08",
+      "runtime": 115,
+      "rating": "PG",
+      "genres": [
+        "가족",
+        "판타지",
+        "코미디",
+        "모험"
+      ],
+      "overview": "끝없는 바다 너머 새로운 세상을 꿈꾸던 모투누이 섬의 소녀 모아나. 어느 날 모투누이에 깊은 어둠이 드리우자, 모아나는 저주에 빠진 섬을 구하기 위해 전설의 영웅 마우이를 찾아, 그와 함께 운명을 건 항해에 나선다. 눈부신 파도, 거대한 모험, 그리고 운명을 바꿀 항해! 오감을 깨울 환상적인 바다가 생생하게 펼쳐진다!",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/etJXeoQovaAcQD8gG0vebtoIlMH.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/c6BPbkO5Npt1OdwttAxCFo06wtH.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1108427-moana?language=ko-KR"
+    },
+    {
+      "id": "ott-barbara-2026-07-08-tving",
+      "justwatchPath": "/kr/영화/barbara",
+      "title": "바바라",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 TVING에 새로 추가된 영화입니다.",
+      "providers": [
+        "TVING"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/97633011/s166/barbara.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/barbara"
+    },
+    {
+      "id": "ott-seuteurimeo-2026-07-08",
+      "justwatchPath": "/kr/영화/seuteurimeo",
+      "title": "스트리머",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Netflix에 새로 추가된 영화입니다.",
+      "providers": [
+        "Netflix"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/304912593/s166/seuteurimeo.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/seuteurimeo"
+    },
+    {
+      "id": "ott-spy-kids-2026-07-08",
+      "justwatchPath": "/kr/영화/spy-kids",
+      "title": "스파이 키드",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Netflix에 새로 추가된 영화입니다.",
+      "providers": [
+        "Netflix"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/32383934/s166/spy-kids.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/spy-kids"
+    },
+    {
+      "id": "theater-1220564-2026-07-08",
+      "tmdbId": 1220564,
+      "title": "시크릿 에이전트",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-08",
+      "runtime": 161,
+      "rating": "15",
+      "genres": [
+        "스릴러",
+        "드라마",
+        "범죄"
+      ],
+      "overview": "1977년 브라질, 이름을 버리고 사라졌던 '마르셀루'는 아들과 재회하기 위해 고향 헤시피로 돌아온다. 카니발의 열기로 들끓는 도시에서 지워진 줄 알았던 과거는 다시 그를 향해 다가오기 시작하는데...",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/c5f1TggTJ7oQvw99msoyKU2ueJz.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/eeGRpU64sIrRApjWXvTpK5Lep2K.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1220564-o-agente-secreto?language=ko-KR"
+    },
+    {
+      "id": "ott-eagle-eye-2026-07-08",
+      "justwatchPath": "/kr/영화/eagle-eye",
+      "title": "이글 아이",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Netflix에 새로 추가된 영화입니다.",
+      "providers": [
+        "Netflix"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/16706695/s166/eagle-eye.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/eagle-eye"
+    },
+    {
+      "id": "ott-the-life-of-chuck-2026-07-08-disney-plus",
+      "justwatchPath": "/kr/영화/the-life-of-chuck",
+      "title": "척의 일생",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Disney+에 새로 추가된 영화입니다.",
+      "providers": [
+        "Disney+"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/340395471/s166/the-life-of-chuck.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/the-life-of-chuck"
+    },
+    {
+      "id": "theater-1288072-2026-07-08",
+      "tmdbId": 1288072,
+      "title": "키퍼",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-08",
+      "runtime": 99,
+      "rating": "14A",
+      "genres": [
+        "공포",
+        "미스터리"
+      ],
+      "overview": "남편을 따라 오랜만에 떠난 휴가, 도착한 산장에선 누군가 지켜보는 느낌이 자꾸 들고 이상한 이들이 찾아와 불안하게 한다. 그리고 곧 남편의 오래된 과거를 발견하게 되는데...",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/mbGHijUc0C3fcM12l6ro6FgxIvg.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/8GjH1BU5PtoqAlhMeXQ46eq9z1D.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1288072-keeper?language=ko-KR"
+    },
+    {
+      "id": "theater-1310677-2026-07-08",
+      "tmdbId": 1310677,
+      "title": "하나 코리아",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-08",
+      "runtime": 106,
+      "rating": "12",
+      "genres": [
+        "드라마"
+      ],
+      "overview": "모든 것을 뒤로하고, 자유를 찾아 남한 사회에 도착한 탈북 여성 혜선. 자유를 향한 그녀의 여정에는 대가가 따른다. 새로운 삶을 개척하기 위해 혜선은 짙게 드리우는 과거의 그림자와 싸우고, 포기와 순응을 요구하는 현대사회에서 자신의 자리를 찾아야 한다. 과연 혜선은 진정으로 자유로워질 수 있을까?",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/fy83JSOatI4XPG5M9Sj4ezVkRNA.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/gXU1At9HJ023Wjm1mHCLnhf80pi.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1310677?language=ko-KR"
+    },
+    {
+      "id": "ott-hwaldonggayi-tansaeng-2026-07-08-disney-plus",
+      "justwatchPath": "/kr/영화/hwaldonggayi-tansaeng",
+      "title": "활동가의 탄생",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Disney+에 새로 추가된 영화입니다.",
+      "providers": [
+        "Disney+"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/320701665/s166/hwaldonggayi-tansaeng.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/hwaldonggayi-tansaeng"
+    },
+    {
+      "id": "theater-27324-2026-07-08",
+      "tmdbId": 27324,
+      "title": "회로",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-08",
+      "runtime": 119,
+      "rating": "15",
+      "genres": [
+        "공포",
+        "스릴러",
+        "미스터리"
+      ],
+      "overview": "대학생활로 바쁜 카와시마 료스케와 평범한 직장여성으로 살아가는 쿠도 미치. 하지만 언젠가부터 그들 주변에서는 이상한 일들이 벌어지기 시작했다. 미치의 동료는 자살하고, 회사의 사장은 실종된다. 애인도 가족도 친구도 차례로 사라져버리는데. 한편 료스케가 시작한 인터넷의 화면에는, 접속도 안했는데 \"유령을 만나고 싶습니까\"라는 메세지가 뜨면서, 검은 자루를 뒤집어쓴 이상한 남자가 류스케를 덮친다. 뭔가를 느낀 료스케는 같은 대학에서 이 이상한 사이트를 연구하고 있는 카라사와 하루에를 찾아가는데, 이미 학생들도, 연구생들도 모두 사라져버린 후이다. 혼란에 빠진 사회. 인터넷을 매개체로 뭐라고 설명할 수 없는 공포가 사람들을 덮친다. 점점 더 폐허가 되고 있는 거리에서, 마침내 료스케와 미치가 만나고, 그들을 엄습해 오는 공포와 맞서는데...",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/rai7xSUENKLvLWjKIv5RNhLlGlV.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/7Zkp2AL7Nc4IWfZefgyvbEeSI7m.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/27324?language=ko-KR"
+    },
+    {
+      "id": "ott-una-navidad-para-c-h-u-e-c-o-2026-07-08-disney-plus",
+      "justwatchPath": "/kr/영화/una-navidad-para-c-h-u-e-c-o",
+      "title": "Una Navidad para C.H.U.E.C.O.",
+      "originalTitle": "",
+      "channel": "ott",
+      "date": "2026-07-08",
+      "runtime": null,
+      "rating": "",
+      "genres": [],
+      "overview": "JustWatch 기준 Disney+에 새로 추가된 영화입니다.",
+      "providers": [
+        "Disney+"
+      ],
+      "posterPath": "https://images.justwatch.com/poster/310164548/s166/una-navidad-para-c-h-u-e-c-o.jpg",
+      "backdropPath": "",
+      "tmdbUrl": "https://www.justwatch.com/kr/영화/una-navidad-para-c-h-u-e-c-o"
+    },
+    {
+      "id": "theater-1551860-2026-07-15",
+      "tmdbId": 1551860,
+      "title": "가능주의자",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 80,
+      "rating": "ALL",
+      "genres": [
+        "다큐멘터리"
+      ],
+      "overview": "“저는 제가 불가능주의자인 줄 알았어요.” 모든 동물의 해방을 꿈꾸는 비건 동물권 활동가들이 지난 십여 년 동안 펼쳐온 한국 동물권 운동. 반려동물의 권리를 넘어, 전시동물과 식용동물의 권리까지 확장하며 개, 돌고래, 돼지, 소, 넙치의 해방을 위해 모든 동물과 공존하는 세상을 꿈꾸며 행동해 온 청년들의 역사를 들어 본다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/nB9XxYxjnTmDxtH7UjtjB6Sf0WL.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/lwIzg2VPH0kJxp5CO63t8s15plk.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1551860?language=ko-KR"
+    },
+    {
+      "id": "theater-266-2026-07-15",
+      "tmdbId": 266,
+      "title": "경멸",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 104,
+      "rating": "15",
+      "genres": [
+        "드라마",
+        "로맨스"
+      ],
+      "overview": "지중해의 뜨거운 태양, 카프리섬의 푸른 바다. 극작가 폴은 영화 '오디세이'의 대본 일을 맡으며 자신의 아름다운 아내 카미유를 영화 제작자에게 소개한다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/2w6C65VGURrfKbUze8pwT5Kewil.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/afxEiYxANGG88xXVYpNtAHFzTIV.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/266-le-mepris?language=ko-KR"
+    },
+    {
+      "id": "theater-1167307-2026-07-15",
+      "tmdbId": 1167307,
+      "title": "다윗",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 110,
+      "rating": "ALL",
+      "genres": [
+        "애니메이션",
+        "가족",
+        "음악",
+        "드라마"
+      ],
+      "overview": "소년 다윗은 어느 날 선지자 사무엘로부터 왕이 될 운명을 듣게 되지만, 그것이 무엇을 의미하는지 알기도 전에 전쟁의 한가운데로 내던져진다. 모두가 숨을 죽인 전장, 세상이 두려워한 거인 골리앗 앞에 홀로 선 다윗은 단 하나의 돌로 마침내 그를 쓰러뜨린다. 기적 같은 승리 이후, 그는 단숨에 영웅이 되지만 그 이름은 곧 사울 왕의 분노를 깨운다. 또다시 거대한 위협 앞에 맞서게 된 다윗은 자신에게 주어진 운명의 무게와 마주하게 되는데...",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/tGmTssnoltCCZBY7ys4lYRTFYFj.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/mZ6J2g6HCV2gj3iuCdSxcyBXq9c.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1167307-david?language=ko-KR"
+    },
+    {
+      "id": "theater-1315772-2026-07-15",
+      "tmdbId": 1315772,
+      "title": "미니언즈 & 몬스터즈",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 90,
+      "rating": "ALL",
+      "genres": [
+        "모험",
+        "애니메이션",
+        "코미디",
+        "가족",
+        "판타지"
+      ],
+      "overview": "우연히 영화 촬영장에 난입한 미니언들이 세계적인 무비스타로 거듭나며 벌어지는 이야기",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/8uvgppq5obV06X9X8SogQiU79Kd.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/xMoXsOgF0hBP7iVj7ZPIrFtTeL3.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1315772-minions-monsters?language=ko-KR"
+    },
+    {
+      "id": "theater-1083968-2026-07-15",
+      "tmdbId": 1083968,
+      "title": "잠금: 셧다운",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 95,
+      "rating": "15",
+      "genres": [
+        "공포",
+        "스릴러"
+      ],
+      "overview": "\"탈출구 없는 SUV, 그 안에 갇힌 두 남자의 심리전\"  딸과의 약속을 지키기 위해 절박한 상황에 놓인 소매치기 에디는 우연히 발견한 고급 SUV에 손을 댄다. 그러나 차량은 단단히 잠겨 있고, 그는 순식간에 그 안에 갇히고 만다. 이 모든 것은 차량 주인 윌리엄의 치밀한 계획이었다. 암 투병 중인 부유한 의사 윌리엄은 과거의 상처를 이유로, 범죄자들에게 자신만의 방식으로 정의를 실현하려 한다. 에디는 점점 더 가혹해지는 심리적·육체적 압박 속에서 생존을 위한 싸움을 시작하게 되는데...",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/rPPp0p4fZUorT6sroNcLW10v9mX.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/r4X2xRrWleVgx0kahP27xRmm3ia.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1083968-locked?language=ko-KR"
+    },
+    {
+      "id": "theater-1323953-2026-07-15",
+      "tmdbId": 1323953,
+      "title": "지구 최후의 여자",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 85,
+      "rating": "12",
+      "genres": [
+        "드라마",
+        "코미디"
+      ],
+      "overview": "영화교양수업을 듣는 파랑머리의 무뚝뚝한 여자, 구한아. 어쩐지 남자에 대한 분노로 가득한 그녀의 시나리오에 아무도 진심으로 피드백해주지 않는데. 단 한 사람, 장편 입봉을 꿈꾸는 감독 지망생 남자 송철만이 천연덕스레 말을 건다. “근데요, 그 영화 남혐 아닌가요?” 자신의 시나리오가 지원사업 당선이 안되는 게 ‘여성영화 가산점’을 받지 못해서라 판단하는 철은, 어이없게도 한아에게 팀플레이를 제안하는데...!",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/sZKa6g4WBW08mIvgwf9dFdXZBGE.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/yZqkiEGwtQK9d5HMckkYz0tT61L.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1323953?language=ko-KR"
+    },
+    {
+      "id": "theater-1290432-2026-07-15",
+      "tmdbId": 1290432,
+      "title": "파리의 사생활",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 103,
+      "rating": "TP",
+      "genres": [
+        "드라마",
+        "미스터리",
+        "범죄"
+      ],
+      "overview": "파리에 사는 정신과 상담의 릴리안은 어느 날 자신의 환자인 폴라가 스스로 목숨을 끊었다는 소식을 듣는다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/a2KQjaEodbBxQAPOz6cU385L7hG.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/3fZ5HvkrjaS34sZERshWm9koXdF.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1290432-vie-privee?language=ko-KR"
+    },
+    {
+      "id": "theater-1058424-2026-07-15",
+      "tmdbId": 1058424,
+      "title": "호프",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-15",
+      "runtime": 156,
+      "rating": "15",
+      "genres": [
+        "SF",
+        "미스터리",
+        "액션"
+      ],
+      "overview": "지원해 줄 인력들은 산불을 끄러 갔고, 이젠 통신도 두절됐다. 호포 출장소의 범석과 성애는 노인들뿐인 마을을 지키기 위해 사투를 벌이고, 놈을 쫓아서  산으로 향했던 청년들과 성기는 되려 놈들의 사냥감이 되어 버린다. 무지가 빚어낸 불행의 씨앗은 입장의 차이를 거쳐 온 우주의 비극이 되고야  만다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/ptqlN6mDIAqJjVA86J5eOoG82zc.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/ujUwzNV8ZkOzZonvhhHsc9KOKDf.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1058424?language=ko-KR"
+    },
+    {
+      "id": "theater-103794-2026-07-22",
+      "tmdbId": 103794,
+      "title": "뱀의 길",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-22",
+      "runtime": 85,
+      "rating": "15",
+      "genres": [
+        "범죄",
+        "스릴러"
+      ],
+      "overview": "어린 딸을 잃은 슬픔과 분노 속에서 복수를 다짐하는 ‘미야시타’. 그의 곁에 나타난 미스터리한 사내 ‘니지마’. 잡힐 듯 잡히지 않는 진실을 쫓아 선과 악의 경계를 넘나드는 두 남자는 한 번 들어서면 돌아올 수 없는 기이하고 길에 들어서게 되는데…",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/eTEhwsCtq4tOJt7E7TZf9cpwvcA.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/wo4PrAv907tC2vIpft5XidTSEYS.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/103794?language=ko-KR"
+    },
+    {
+      "id": "theater-1329863-2026-07-22",
+      "tmdbId": 1329863,
+      "title": "소영의 노력",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-22",
+      "runtime": 73,
+      "rating": "12",
+      "genres": [
+        "다큐멘터리"
+      ],
+      "overview": "소영은 밤마다 무대를 떠올린다. 소영은 장애를 가지고 있다. 소영은 ‘일반인’의 몸을 상상하며 춤을 춘다. 소영은 칭찬을 경계한다. 희정은 소영의 무용 선생님이다. 희정은 동작을 잘 기억하라고 말한다. 희정은 하고 싶은 대로 하라고 말한다. 소영과 희정은 공연을 올린다. 다음 날 소영의 일상은 돌아온다. 소영은 자신을 기록하기 시작한다. 소영은 흐르는 물과 계절을 지나 목적지로 향한다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/aHer5L9rde9DfZRk0qh1tFwdKHn.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(blur)/aHer5L9rde9DfZRk0qh1tFwdKHn.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1329863?language=ko-KR"
+    },
+    {
+      "id": "theater-1418811-2026-07-22",
+      "tmdbId": 1418811,
+      "title": "지느러미",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-22",
+      "runtime": 85,
+      "rating": "15",
+      "genres": [
+        "판타지",
+        "SF",
+        "스릴러"
+      ],
+      "overview": "통일 대한민국. 육지와 오염된 바다를 나누는 장벽 바깥에선 오메가로 불리는 추방된 돌연변이들이 착취당하며 바다 청소 노동에 쓰인다. 공무원 수진은 어느 실내 낚시터 직원 미아에 대한 의심을 품게 되며 추격을 시작하는데…",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/blmCo4LAMpYjJcFsYfsfbrD0Xre.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/nmEC4cxuUVuWyzKMYzdCnLbhYw7.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1418811?language=ko-KR"
+    },
+    {
+      "id": "theater-1430077-2026-07-22",
+      "tmdbId": 1430077,
+      "title": "호컴",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-22",
+      "runtime": 108,
+      "rating": "15",
+      "genres": [
+        "공포"
+      ],
+      "overview": "소설가 옴 바우만은 부모님의 유골을 뿌리기 위해 외딴 숙소를 찾지만, 이내 허니문 스위트룸에 출몰한다는 마녀의 이야기에 사로잡힌다. 기괴한 환영과 충격적인 실종 사건이 이어지면서, 그는 결국 자신의 과거 속 어두운 구석을 마주해야만 하는 상황에 직면한다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/qY7zVZ7liULhfRoXg4c9Xl83LcR.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1430077-hokum?language=ko-KR"
+    },
+    {
+      "id": "theater-1329578-2026-07-24",
+      "tmdbId": 1329578,
+      "title": "드림 애니멀즈: 더무비",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-24",
+      "runtime": 91,
+      "rating": "ALL",
+      "genres": [
+        "애니메이션"
+      ],
+      "overview": "과자와 인간이 사이좋게 지내는 ‘스위츠랜드’의 슈퍼스타 ‘드림 애니멀즈’. 천상의 목소리 ‘페가수스’가 합류한 ‘드림 애니멀즈’는 월드투어를 성황리에 마친다. 하지만 돌아온 ‘스위츠랜드’는 과자를 전부 없애고 세계 정복을 노리는 무시무시한 솜사탕 악당 ‘킹고튼’에게 점령당해 있는데...! 과연 전투력 제로! 귀여움으로 무장한 ‘드림 애니멀즈’는 절체절명의 위기를 극복하고 과자세계를 구할 수 있을까?",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/A42QHWC6lThuUBpIpdYoB4BD87r.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/blQoqQ5WFr8TbQ54PpvZOPrU6J1.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1329578-the-movie?language=ko-KR"
+    },
+    {
+      "id": "theater-1453301-2026-07-29",
+      "tmdbId": 1453301,
+      "title": "산양들",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-29",
+      "runtime": 107,
+      "rating": "12",
+      "genres": [
+        "드라마"
+      ],
+      "overview": "수능 D-day 200일, 다들 입시에 몰두할 때, 사육장 담당 인혜는 오리에게 설교하기 바쁘다. 어느 날, 칼을 소지한 벌로 서희도 인혜와 함께 사육장을 청소한다. 둘은 버려진 평원을 발견하는데, 사육장 오리 희선이를 그곳에서 잃어버린다. 한편, 진학부장 김아테 선생은 학교도, 부모도, 본인도 포기한 4인방(인혜, 서희, 정애, 수민)을 모아 ‘수시 면접반’을 만든다. 대학교 면접 날, 인혜와 서희는 땡땡이 치고 희선이를 찾기 위해 평원으로 간다. 숲에서 텐트를 치고 야영하며 점점 야생에 적응해간다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/v2SUJzaBeOsSY5RT3r6hlzEmcd9.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/d0rWwsiTiCxoAbmuh6FqAJKrNyR.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1453301?language=ko-KR"
+    },
+    {
+      "id": "theater-969681-2026-07-29",
+      "tmdbId": 969681,
+      "title": "스파이더맨: 브랜드 뉴 데이",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-29",
+      "runtime": 150,
+      "rating": "12",
+      "genres": [
+        "SF",
+        "액션",
+        "모험"
+      ],
+      "overview": "모두에게 잊힌 ‘피터 파커’가 자신의 정체를 기억하는 의문의 적의 등장과 DNA 변이로 통제 불가능한 힘을 얻으며 더 깊은 혼란에 빠진 가운데, 소중한 이들을 지키기 위해 새로운 위협에 맞서는 액션 블록버스터",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/8mLepBa5l591xFidRpn65xV7hb4.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/vjMvFSmGUxEtqVdaZgvFee9XkZl.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/969681-spider-man-brand-new-day?language=ko-KR"
+    },
+    {
+      "id": "theater-1188968-2026-07-29",
+      "tmdbId": 1188968,
+      "title": "어떻게 해야 했을까?",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-07-29",
+      "runtime": 101,
+      "rating": "12",
+      "genres": [
+        "다큐멘터리"
+      ],
+      "overview": "1983년경, 의대에 다니던 24살의 누나는 조현병 증상을 보이기 시작했다. 하지만 그녀도, 의사이자 연구자인 부모도 이를 인식하지 못해 정신과 진료를 받지 않았다. 여동생보다 8살 어린 남동생은 부모의 판단에 의문을 품지만, 해결하지 못한 채 집을 떠나 일자리를 구한다. 누나는 졸업 후 은둔생활을 시작했고, 부모는 집 안에 연구실을 차렸다. 2001년부터 남동생은 집에 돌아올 때마다 가족을 영상으로 기록하기 시작했고, 누나와 부모와의 대화를 이어갔다. 이후 부모는 현관문을 쇠사슬과 자물쇠로 잠가 딸을 집 안에 가둬버렸다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/7G0wrfzXcsh1uLtVKT4LvEYawuT.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/1dqJn5aYX4jZgHV0OmQzGsTVu30.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1188968?language=ko-KR"
+    },
+    {
+      "id": "theater-1298085-2026-08-05",
+      "tmdbId": 1298085,
+      "title": "구제역에서 살아 돌아온 돼지",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-08-05",
+      "runtime": 105,
+      "rating": "15",
+      "genres": [
+        "애니메이션",
+        "드라마",
+        "판타지",
+        "공포"
+      ],
+      "overview": "강렬한 의지로 구제역에서 홀로 살아 남은 ‘돼지H’는 다짐한다. 쓰레기처럼 죽지 않으려면 인간이 되어야 한다. 몸은 물론이거니와 얼굴까지 의심할 여지 없는 완벽한 인간, 그것만이 유일한 방법이라 확신한다. 그는 어떠한 대가를 치르더라도, 자신의 모든 것을 바칠 준비가 되어 있다. 어린 시절부터 끊임 없는 괴롭힘에 시달리던 ‘최정석’은 다짐한다. 이 지긋지긋한 인간의 삶을 포기하고 싶다. 차라리 짐승이 되고 싶다. 본능에 충실한, 죽고 싶다는 생각조차 할 수 없는, 그야말로 원시 상태의 완벽한 짐승. 그는 자신의 모든 것을 버릴 준비가 되어 있다.​",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/kiVeXf8rlxvrjijA2MECSNnBx4D.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/cKRUl5WJz5Os2lcwQgRKEPDSYeH.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1298085?language=ko-KR"
+    },
+    {
+      "id": "theater-1436168-2026-08-05",
+      "tmdbId": 1436168,
+      "title": "사랑의 하츄핑: 고래보석의 전설",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-08-05",
+      "runtime": 105,
+      "rating": "ALL",
+      "genres": [
+        "애니메이션",
+        "가족",
+        "모험",
+        "판타지"
+      ],
+      "overview": "하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고… 그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다. 한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미. 처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데… 찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들. 마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/tmV1b9s0zKtUx06pkYaRtBAz065.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(blur)/tmV1b9s0zKtUx06pkYaRtBAz065.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1436168?language=ko-KR"
+    },
+    {
+      "id": "theater-1368337-2026-08-05",
+      "tmdbId": 1368337,
+      "title": "오디세이",
+      "originalTitle": "",
+      "channel": "theater",
+      "date": "2026-08-05",
+      "runtime": 172,
+      "rating": "15",
+      "genres": [
+        "모험",
+        "액션",
+        "판타지"
+      ],
+      "overview": "10년간 이어진 트로이 전쟁을 승리로 이끈 영웅 '오디세우스'는 왕의 부재를 틈타 침탈과 권력 다툼이 벌어진 왕국에서 그를 기다리고 있는 아내 '페넬로페'와 아들 '텔레마코스'에게 돌아가기 위한 여정에 나선다. 그러나 신들의 분노를 산 그의 귀환 앞에는 거대한 폭풍과 괴물들, 그리고 거스를 수 없는 운명의 시련이 기다리고 있는데…",
+      "providers": [],
+      "posterPath": "https://media.themoviedb.org/t/p/w220_and_h330_face/8ze9OcVuFiy94s6FFPvsn4oC2e1.jpg",
+      "backdropPath": "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/m3Pom6pbD51bBv3syz8NMHda3fz.jpg",
+      "tmdbUrl": "https://www.themoviedb.org/movie/1368337-the-odyssey?language=ko-KR"
+    }
+  ]
+}

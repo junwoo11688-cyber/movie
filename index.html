@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개봉/OTT 캘린더</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1e2024;
+      --muted: #686d74;
+      --line: #d7dadd;
+      --paper: #f8f9f5;
+      --surface: #ffffff;
+      --cinema: #b9473d;
+      --cinema-soft: #f7d8d2;
+      --ott: #087a75;
+      --ott-soft: #ccefed;
+      --gold: #ca902f;
+      --green: #53673a;
+      --shadow: 0 18px 42px rgba(30, 32, 36, 0.12);
+      --radius: 8px;
+      font-family: Inter, Pretendard, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 330px;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(15, 16, 19, 0.88), rgba(15, 16, 19, 0.54) 48%, rgba(15, 16, 19, 0.18)),
+        url("assets/cinema-calendar-hero.png") center / cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .topbar,
+    .heroInner,
+    .toolbar,
+    .workspace {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brandMark {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .brandText {
+      font-size: 15px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .sourceBar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .heroInner {
+      padding: 38px 0 42px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: 0.95;
+      max-width: 760px;
+      letter-spacing: 0;
+    }
+
+    .heroMeta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 830px;
+    }
+
+    .metric {
+      border-left: 3px solid rgba(255, 255, 255, 0.52);
+      padding: 8px 10px 8px 12px;
+      background: rgba(13, 14, 17, 0.24);
+      min-width: 0;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1.05;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 12px;
+      font-weight: 700;
+      word-break: keep-all;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 18px 0 14px;
+    }
+
+    .monthControls,
+    .filters,
+    .fieldGroup {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .monthTitle {
+      min-width: 146px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .iconButton,
+    .tabButton,
+    .textButton,
+    .field {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 1px 0 rgba(30, 32, 36, 0.04);
+    }
+
+    .iconButton {
+      width: 40px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .tabButton {
+      padding: 0 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .tabButton[aria-selected="true"] {
+      color: #fff;
+      border-color: var(--ink);
+      background: var(--ink);
+    }
+
+    .textButton {
+      padding: 0 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .fieldGroup {
+      justify-content: flex-end;
+    }
+
+    .field {
+      padding: 0 12px;
+      min-width: 156px;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 318px;
+      gap: 18px;
+      align-items: start;
+      padding: 0 0 36px;
+    }
+
+    .calendarShell,
+    .sideRail {
+      min-width: 0;
+    }
+
+    .weekdayRow,
+    .calendarGrid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .weekdayRow {
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .dayCell {
+      height: 112px;
+      min-height: 112px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      overflow: hidden;
+    }
+
+    .dayCell.hasEvents {
+      background: #fffefb;
+    }
+
+    .dayCell:not(.hasEvents) {
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .dayCell.isOtherMonth {
+      background: rgba(255, 255, 255, 0.52);
+      color: #9aa0a7;
+    }
+
+    .dayCell.isToday {
+      border-color: var(--gold);
+      box-shadow: inset 0 0 0 2px rgba(202, 144, 47, 0.24);
+    }
+
+    .dayHead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      min-height: 18px;
+    }
+
+    .dayNumber {
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .dayBadge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: #edf0ea;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .eventList {
+      display: grid;
+      gap: 4px;
+      align-content: start;
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: 2px;
+      scrollbar-width: thin;
+      scrollbar-color: #bfc5c8 transparent;
+    }
+
+    .eventChip {
+      width: 100%;
+      border: 0;
+      border-radius: 6px;
+      padding: 5px 6px;
+      display: grid;
+      grid-template-columns: 4px minmax(0, 1fr);
+      gap: 6px;
+      text-align: left;
+      background: #f4f5f0;
+      color: var(--ink);
+    }
+
+    .eventChip:hover,
+    .eventChip:focus-visible {
+      outline: 2px solid rgba(8, 122, 117, 0.28);
+      outline-offset: 1px;
+    }
+
+    .eventStripe {
+      border-radius: 99px;
+      background: var(--cinema);
+    }
+
+    .eventChip[data-channel="ott"] .eventStripe {
+      background: var(--ott);
+    }
+
+    .eventTitle {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 11px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+
+    .eventSub {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.15;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sideRail {
+      display: grid;
+      gap: 12px;
+      position: sticky;
+      top: 12px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 1px 0 rgba(30, 32, 36, 0.04);
+      overflow: hidden;
+    }
+
+    .panelHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panelHeader h2 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .panelBody {
+      padding: 14px;
+    }
+
+    .detailPoster {
+      border-radius: 7px;
+      background: #f1f2ed;
+      overflow: hidden;
+    }
+
+    .detailPoster img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .detailPosterFallback {
+      min-height: 210px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      color: var(--muted);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .detailTitle {
+      margin: 12px 0 0;
+      font-size: 22px;
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
+    .detailMeta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 0 8px;
+      border-radius: 999px;
+      background: #ecefeb;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .tag.cinema {
+      background: var(--cinema-soft);
+      color: #7a251d;
+    }
+
+    .tag.ott {
+      background: var(--ott-soft);
+      color: #035d59;
+    }
+
+    .detailOverview {
+      margin: 0;
+      color: #3e4248;
+      line-height: 1.55;
+      font-size: 14px;
+      word-break: keep-all;
+    }
+
+    .providerList {
+      display: grid;
+      gap: 8px;
+    }
+
+    .emptyState {
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.62);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .sourceNote {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+
+    .sourceNote a {
+      color: var(--ott);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .toolbar {
+        grid-template-columns: 1fr;
+      }
+
+      .monthControls,
+      .filters,
+      .fieldGroup {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .field {
+        flex: 1 1 180px;
+      }
+
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .sideRail {
+        position: static;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        min-height: 310px;
+      }
+
+      .topbar,
+      .heroInner,
+      .toolbar,
+      .workspace {
+        width: min(100% - 22px, 1180px);
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .sourceBar {
+        justify-content: flex-start;
+      }
+
+      .heroMeta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .calendarShell {
+        display: grid;
+        gap: 8px;
+      }
+
+      .weekdayRow {
+        display: none;
+      }
+
+      .calendarGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .dayCell {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        align-items: start;
+        gap: 8px;
+        height: auto;
+        min-height: auto;
+        padding: 8px;
+      }
+
+      .dayCell:not(.hasEvents) {
+        display: none;
+      }
+
+      .dayHead {
+        min-height: 42px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 6px;
+        background: #edf0ea;
+      }
+
+      .dayBadge {
+        min-width: 18px;
+        height: 18px;
+        margin-top: 3px;
+      }
+
+      .eventList {
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+      }
+
+      .eventTitle,
+      .eventSub {
+        white-space: normal;
+      }
+
+      .sideRail {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 470px) {
+      .heroMeta {
+        grid-template-columns: 1fr;
+      }
+
+      .monthControls {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        width: 100%;
+      }
+
+      .monthTitle {
+        min-width: 0;
+      }
+
+      .filters,
+      .fieldGroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+      }
+
+      .filters .tabButton:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .field,
+      .textButton {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="topbar">
+      <div class="brand" aria-label="사이트 이름">
+        <div class="brandMark">R</div>
+        <div class="brandText">Release Calendar</div>
+      </div>
+      <div class="sourceBar">
+        <span class="pill" id="sourcePill">데이터 확인 중</span>
+        <span class="pill" id="updatedPill">업데이트 확인 중</span>
+      </div>
+    </div>
+
+    <div class="heroInner">
+      <h1>개봉/OTT 캘린더</h1>
+      <div class="heroMeta" aria-label="월간 요약">
+        <div class="metric"><strong id="metricToday">0</strong><span>오늘</span></div>
+        <div class="metric"><strong id="metricWeek">0</strong><span>7일 내</span></div>
+        <div class="metric"><strong id="metricTheater">0</strong><span>극장</span></div>
+        <div class="metric"><strong id="metricOtt">0</strong><span>OTT/디지털</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="캘린더 필터">
+      <div class="monthControls">
+        <button class="iconButton" id="prevMonth" type="button" aria-label="이전 달">‹</button>
+        <div class="monthTitle" id="monthTitle">2026. 07</div>
+        <button class="iconButton" id="nextMonth" type="button" aria-label="다음 달">›</button>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="채널">
+        <button class="tabButton" type="button" data-channel="all" role="tab" aria-selected="true">전체</button>
+        <button class="tabButton" type="button" data-channel="theater" role="tab" aria-selected="false">극장</button>
+        <button class="tabButton" type="button" data-channel="ott" role="tab" aria-selected="false">OTT</button>
+      </div>
+
+      <div class="fieldGroup">
+        <input class="field" id="searchInput" type="search" placeholder="제목 검색" autocomplete="off">
+        <select class="field" id="genreSelect" aria-label="장르">
+          <option value="all">모든 장르</option>
+        </select>
+        <button class="textButton" id="todayButton" type="button">오늘</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="calendarShell">
+        <div class="weekdayRow" aria-hidden="true">
+          <div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div>
+        </div>
+        <div class="calendarGrid" id="calendarGrid" aria-live="polite"></div>
+      </div>
+
+      <aside class="sideRail">
+        <section class="panel" aria-label="선택 작품">
+          <div class="panelHeader">
+            <h2>선택 작품</h2>
+            <span class="tag" id="detailDday">D-0</span>
+          </div>
+          <div class="panelBody" id="detailPanel"></div>
+        </section>
+
+        <section class="panel" aria-label="데이터 출처">
+          <div class="panelHeader">
+            <h2>데이터</h2>
+            <span class="tag" id="regionTag">KR</span>
+          </div>
+          <div class="panelBody">
+            <p class="sourceNote" id="sourceNote">데이터를 불러오는 중입니다.</p>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="data/releases.js"></script>
+  <script>
+    const EMPTY_DATA = {
+      generatedAt: "",
+      region: "KR",
+      language: "ko-KR",
+      source: "pending",
+      note: "자동 업데이트가 아직 실제 데이터를 생성하지 않았습니다.",
+      attribution: [],
+      items: []
+    };
+
+    const state = {
+      data: EMPTY_DATA,
+      channel: "all",
+      query: "",
+      genre: "all",
+      currentMonth: startOfMonth(todayLocal()),
+      selectedId: null
+    };
+
+    const els = {
+      sourcePill: document.querySelector("#sourcePill"),
+      updatedPill: document.querySelector("#updatedPill"),
+      metricToday: document.querySelector("#metricToday"),
+      metricWeek: document.querySelector("#metricWeek"),
+      metricTheater: document.querySelector("#metricTheater"),
+      metricOtt: document.querySelector("#metricOtt"),
+      monthTitle: document.querySelector("#monthTitle"),
+      prevMonth: document.querySelector("#prevMonth"),
+      nextMonth: document.querySelector("#nextMonth"),
+      todayButton: document.querySelector("#todayButton"),
+      searchInput: document.querySelector("#searchInput"),
+      genreSelect: document.querySelector("#genreSelect"),
+      calendarGrid: document.querySelector("#calendarGrid"),
+      detailPanel: document.querySelector("#detailPanel"),
+      detailDday: document.querySelector("#detailDday"),
+      sourceNote: document.querySelector("#sourceNote"),
+      regionTag: document.querySelector("#regionTag")
+    };
+
+    boot();
+
+    async function boot() {
+      state.data = await loadReleaseData();
+      normalizeData();
+      state.currentMonth = startOfMonth(bestInitialMonth());
+      state.selectedId = firstUpcoming(filteredItems(false))?.id ?? state.data.items[0]?.id ?? null;
+      bindEvents();
+      render();
+    }
+
+    async function loadReleaseData() {
+      if (location.protocol === "file:" && window.RELEASE_DATA?.items) return window.RELEASE_DATA;
+      if (location.protocol === "file:") return EMPTY_DATA;
+
+      const todayKey = formatDate(todayLocal());
+      try {
+        const response = await fetch(`data/releases.json?v=${todayKey}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const json = await response.json();
+        if (!Array.isArray(json.items)) throw new Error("Invalid release data");
+        return json;
+      } catch (error) {
+        if (window.RELEASE_DATA?.items) return window.RELEASE_DATA;
+        return EMPTY_DATA;
+      }
+    }
+
+    function normalizeData() {
+      state.data.items = state.data.items
+        .filter((item) => item && item.title && item.date)
+        .map((item) => ({
+          ...item,
+          id: String(item.id),
+          channel: item.channel === "ott" ? "ott" : "theater",
+          genres: Array.isArray(item.genres) ? item.genres.filter(Boolean) : [],
+          providers: Array.isArray(item.providers) ? item.providers.filter(Boolean) : []
+        }))
+        .sort((a, b) => a.date.localeCompare(b.date) || a.title.localeCompare(b.title, "ko"));
+    }
+
+    function bindEvents() {
+      els.prevMonth.addEventListener("click", () => {
+        state.currentMonth = addMonths(state.currentMonth, -1);
+        render();
+      });
+
+      els.nextMonth.addEventListener("click", () => {
+        state.currentMonth = addMonths(state.currentMonth, 1);
+        render();
+      });
+
+      els.todayButton.addEventListener("click", () => {
+        state.currentMonth = startOfMonth(todayLocal());
+        state.selectedId = firstUpcoming(filteredItems(false))?.id ?? state.selectedId;
+        render();
+      });
+
+      document.querySelectorAll(".tabButton").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.channel = button.dataset.channel;
+          document.querySelectorAll(".tabButton").forEach((tab) => {
+            tab.setAttribute("aria-selected", String(tab === button));
+          });
+          state.selectedId = firstUpcoming(filteredItems(false))?.id ?? null;
+          render();
+        });
+      });
+
+      els.searchInput.addEventListener("input", (event) => {
+        state.query = event.target.value.trim().toLowerCase();
+        state.selectedId = firstUpcoming(filteredItems(false))?.id ?? null;
+        render();
+      });
+
+      els.genreSelect.addEventListener("change", (event) => {
+        state.genre = event.target.value;
+        state.selectedId = firstUpcoming(filteredItems(false))?.id ?? null;
+        render();
+      });
+    }
+
+    function render() {
+      renderSource();
+      renderGenres();
+      renderMetrics();
+      renderCalendar();
+      renderDetail();
+    }
+
+    function renderSource() {
+      const generated = state.data.generatedAt ? formatDateTime(state.data.generatedAt) : "알 수 없음";
+      const isLiveData = state.data.source !== "pending";
+      const sourceName = state.data.source === "tmdb-api" ? "TMDB API" : state.data.source === "tmdb-public" ? "공개 웹" : "자동 갱신 대기";
+      els.sourcePill.textContent = `${sourceName} 데이터`;
+      els.updatedPill.textContent = `갱신 ${generated}`;
+      els.regionTag.textContent = state.data.region ?? "KR";
+
+      if (isLiveData) {
+        els.sourceNote.innerHTML = [
+          "극장 정보는 TMDB, OTT 신작 정보는 JustWatch 공개 데이터를 사용합니다.",
+          "예약 작업이 하루 한 번 새 데이터를 받아 이 파일을 자동 갱신합니다."
+        ].join(" ");
+      } else {
+        els.sourceNote.textContent = "아직 실제 데이터 캐시가 없습니다. GitHub Actions가 TMDB에서 실제 개봉/OTT 정보를 가져오면 이 영역이 자동으로 채워집니다.";
+      }
+    }
+
+    function renderGenres() {
+      const current = els.genreSelect.value || state.genre;
+      const genres = [...new Set(state.data.items.flatMap((item) => item.genres))].sort((a, b) => a.localeCompare(b, "ko"));
+      els.genreSelect.innerHTML = `<option value="all">모든 장르</option>${genres.map((genre) => `<option value="${escapeHtml(genre)}">${escapeHtml(genre)}</option>`).join("")}`;
+      state.genre = genres.includes(current) ? current : "all";
+      els.genreSelect.value = state.genre;
+    }
+
+    function renderMetrics() {
+      const today = todayLocal();
+      const weekEnd = addDays(today, 7);
+      const monthItems = itemsInMonth(filteredItems(false), state.currentMonth);
+      els.metricToday.textContent = state.data.items.filter((item) => item.date === formatDate(today)).length;
+      els.metricWeek.textContent = state.data.items.filter((item) => inDateRange(parseDate(item.date), today, weekEnd)).length;
+      els.metricTheater.textContent = monthItems.filter((item) => item.channel === "theater").length;
+      els.metricOtt.textContent = monthItems.filter((item) => item.channel === "ott").length;
+    }
+
+    function renderCalendar() {
+      const month = state.currentMonth;
+      els.monthTitle.textContent = `${month.getFullYear()}. ${String(month.getMonth() + 1).padStart(2, "0")}`;
+      const items = filteredItems();
+      const cells = calendarCells(month);
+      const todayKey = formatDate(todayLocal());
+
+      els.calendarGrid.innerHTML = cells.map((date) => {
+        const key = formatDate(date);
+        const dayItems = items.filter((item) => item.date === key);
+        const isOtherMonth = date.getMonth() !== month.getMonth();
+        const isToday = key === todayKey;
+        const hasEvents = dayItems.length > 0;
+        const events = dayItems.map((item) => eventChip(item)).join("");
+        return `
+          <article class="dayCell ${hasEvents ? "hasEvents" : "noEvents"} ${isOtherMonth ? "isOtherMonth" : ""} ${isToday ? "isToday" : ""}" data-date="${key}">
+            <div class="dayHead">
+              <span class="dayNumber">${date.getDate()}</span>
+              ${dayItems.length ? `<span class="dayBadge">${dayItems.length}</span>` : ""}
+            </div>
+            <div class="eventList">${events}</div>
+          </article>
+        `;
+      }).join("");
+
+      els.calendarGrid.querySelectorAll(".eventChip").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.selectedId = button.dataset.id;
+          renderDetail();
+        });
+      });
+    }
+
+    function eventChip(item) {
+      const channelLabel = item.channel === "ott" ? providerLabel(item) : "극장";
+      return `
+        <button class="eventChip" type="button" data-id="${escapeHtml(item.id)}" data-channel="${item.channel}">
+          <span class="eventStripe" aria-hidden="true"></span>
+          <span>
+            <span class="eventTitle">${escapeHtml(item.title)}</span>
+            <span class="eventSub">${escapeHtml(channelLabel)} · ${ddayLabel(item.date)}</span>
+          </span>
+        </button>
+      `;
+    }
+
+    function renderDetail() {
+      const items = filteredItems(false);
+      const selected = items.find((item) => item.id === state.selectedId) ?? firstUpcoming(items) ?? items[0];
+      if (!selected) {
+        const message = state.data.source !== "pending" ? "일정 없음" : "실제 데이터 자동 갱신 대기";
+        els.detailDday.textContent = "-";
+        els.detailPanel.innerHTML = `<div class="emptyState">${message}</div>`;
+        return;
+      }
+
+      state.selectedId = selected.id;
+      els.detailDday.textContent = ddayLabel(selected.date);
+      const channelClass = selected.channel === "ott" ? "ott" : "cinema";
+      const channelText = selected.channel === "ott" ? "OTT/디지털" : "극장";
+      const posterUrl = selected.posterPath ? imageUrl(selected.posterPath, "w780") : "";
+      const posterMarkup = posterUrl
+        ? `<div class="detailPoster"><img src="${escapeAttr(posterUrl)}" alt="${escapeAttr(selected.title)} 포스터" loading="lazy"></div>`
+        : `<div class="detailPoster"><div class="detailPosterFallback">포스터 없음</div></div>`;
+      const tags = [
+        `<span class="tag ${channelClass}">${channelText}</span>`,
+        `<span class="tag">${formatKoreanDate(selected.date)}</span>`,
+        selected.runtime ? `<span class="tag">${selected.runtime}분</span>` : "",
+        selected.rating ? `<span class="tag">${escapeHtml(selected.rating)}</span>` : "",
+        ...selected.genres.map((genre) => `<span class="tag">${escapeHtml(genre)}</span>`)
+      ].filter(Boolean).join("");
+      const providers = selected.channel === "ott" && selected.providers.length
+        ? `<div class="providerList">${selected.providers.map((name) => `<span class="tag ott">${escapeHtml(name)}</span>`).join("")}</div>`
+        : "";
+      const sourceLabel = selected.tmdbUrl?.includes("justwatch.com") ? "JustWatch" : "TMDB";
+      const link = selected.tmdbUrl ? `<p class="sourceNote"><a href="${escapeAttr(selected.tmdbUrl)}" target="_blank" rel="noreferrer">${sourceLabel}</a></p>` : "";
+
+      els.detailPanel.innerHTML = `
+        ${posterMarkup}
+        <h3 class="detailTitle">${escapeHtml(selected.title)}</h3>
+        <div class="detailMeta">${tags}</div>
+        <p class="detailOverview">${escapeHtml(selected.overview || "줄거리 정보 없음")}</p>
+        ${providers ? `<div class="detailMeta">${providers}</div>` : ""}
+        ${link}
+      `;
+    }
+
+    function filteredItems(includeMonth = true) {
+      const query = state.query;
+      let items = state.data.items.filter((item) => {
+        const channelMatch = state.channel === "all" || item.channel === state.channel;
+        const genreMatch = state.genre === "all" || item.genres.includes(state.genre);
+        const queryTarget = `${item.title} ${item.originalTitle ?? ""} ${item.genres.join(" ")} ${item.providers.join(" ")}`.toLowerCase();
+        const queryMatch = !query || queryTarget.includes(query);
+        return channelMatch && genreMatch && queryMatch;
+      });
+      if (includeMonth) items = itemsInMonth(items, state.currentMonth, true);
+      return items.sort((a, b) => a.date.localeCompare(b.date) || a.title.localeCompare(b.title, "ko"));
+    }
+
+    function itemsInMonth(items, month, includeAdjacent = false) {
+      const start = includeAdjacent ? calendarCells(month)[0] : startOfMonth(month);
+      const end = includeAdjacent ? calendarCells(month).at(-1) : endOfMonth(month);
+      return items.filter((item) => inDateRange(parseDate(item.date), start, end));
+    }
+
+    function calendarCells(month) {
+      const first = startOfMonth(month);
+      const start = addDays(first, -first.getDay());
+      return Array.from({ length: 42 }, (_, index) => addDays(start, index));
+    }
+
+    function firstUpcoming(items) {
+      const today = stripTime(todayLocal());
+      return items.find((item) => parseDate(item.date) >= today) ?? items[0];
+    }
+
+    function bestInitialMonth() {
+      const upcoming = firstUpcoming(state.data.items);
+      return upcoming ? parseDate(upcoming.date) : todayLocal();
+    }
+
+    function todayLocal() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    function stripTime(date) {
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
+
+    function startOfMonth(date) {
+      return new Date(date.getFullYear(), date.getMonth(), 1);
+    }
+
+    function endOfMonth(date) {
+      return new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    }
+
+    function addDays(date, days) {
+      const next = new Date(date);
+      next.setDate(next.getDate() + days);
+      return next;
+    }
+
+    function addMonths(date, months) {
+      return new Date(date.getFullYear(), date.getMonth() + months, 1);
+    }
+
+    function parseDate(value) {
+      const [year, month, day] = value.split("-").map(Number);
+      return new Date(year, month - 1, day);
+    }
+
+    function formatDate(date) {
+      return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+    }
+
+    function formatKoreanDate(value) {
+      const date = parseDate(value);
+      return `${date.getMonth() + 1}월 ${date.getDate()}일`;
+    }
+
+    function formatDateTime(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value.slice(0, 10);
+      return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
+    }
+
+    function inDateRange(date, start, end) {
+      const target = stripTime(date).getTime();
+      return target >= stripTime(start).getTime() && target <= stripTime(end).getTime();
+    }
+
+    function ddayLabel(value) {
+      const diff = Math.round((parseDate(value) - stripTime(todayLocal())) / 86400000);
+      if (diff === 0) return "D-Day";
+      if (diff > 0) return `D-${diff}`;
+      return `D+${Math.abs(diff)}`;
+    }
+
+    function providerLabel(item) {
+      return item.providers.length ? item.providers.slice(0, 2).join(", ") : "OTT";
+    }
+
+    function imageUrl(path, size) {
+      if (!path) return "";
+      if (path.startsWith("http")) return path;
+      return `https://image.tmdb.org/t/p/${size}${path}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function escapeAttr(value) {
+      return escapeHtml(value).replaceAll("`", "&#096;");
+    }
+  </script>
+</body>
+</html>
